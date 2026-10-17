@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cal Sans", "Helvetica Neue", sans-serif;
+  --font-heading: "Playfair Display", Georgia, serif;
+}
+
+:root {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-paper);
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+
+  --color-ink: #252820;
+  --color-muted: #73766f;
+  --color-paper: #fbfaf6;
+  --color-sand: #f0eee6;
+  --color-terracotta: #c96548;
+  --color-green: #35453a;
+  --color-border: #e5e2d8;
+  --color-border-subtle: #e8e5dc;
+  --color-card: #fffefa;
+  --color-control: #fffefa;
+  --color-soft: #f6f4ed;
+  --color-raised: #fffdf5;
+  --color-subtle-text: #89877d;
+  --color-success: #32634b;
+  --font-display: var(--font-heading);
+  --content-width: 1200px;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-ink: #f2f0e8;
+  --color-muted: #b1b6ad;
+  --color-paper: #171a17;
+  --color-sand: #202520;
+  --color-terracotta: #e28a6c;
+  --color-border: #3b433b;
+  --color-border-subtle: #333a33;
+  --color-card: #222823;
+  --color-control: #1c211d;
+  --color-soft: #252b25;
+  --color-raised: #29312b;
+  --color-subtle-text: #aaa99c;
+  --color-success: #9bc9a9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  transition:
+    background-color 220ms ease,
+    color 220ms ease;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-sans);
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+::selection {
+  color: #fff;
+  background: var(--color-terracotta);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-terracotta);
+  outline-offset: 3px;
+}
